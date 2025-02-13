@@ -7,7 +7,7 @@ const getReview = async (req, res) => {
     return res.status(400).json({ error: "Prompt is required" });
   }
   const response = await aiService.generateContent(lang + prompt);
-  console.log(response);
+  // console.log(response);
 
   res.send(response);
 };
