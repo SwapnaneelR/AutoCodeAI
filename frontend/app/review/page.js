@@ -39,6 +39,7 @@ const Page = () => {
   }, [selectedLang]);
 
   async function handleSubmit() {
+    setResponse("");
     const response = await axios.post("http://localhost:5000/ai/get-review", {
       prompt,
       lang: selectedLang,
