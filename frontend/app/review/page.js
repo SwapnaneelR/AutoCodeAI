@@ -40,10 +40,13 @@ const Page = () => {
 
   async function handleSubmit() {
     setResponse("");
-    const response = await axios.post("http://localhost:5000/ai/get-review", {
-      prompt,
-      lang: selectedLang,
-    });
+    const response = await axios.post(
+      "https://auto-code-ai-backend.vercel.app/ai/get-review",
+      {
+        prompt,
+        lang: selectedLang,
+      }
+    );
     setResponse(response.data);
   }
 
