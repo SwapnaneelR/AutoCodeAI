@@ -7,7 +7,7 @@ const app = express();
  
 app.use(cors(
   {
-    origin: "https://auto-code-ai.vercel.app/",
+    origin: "https://auto-code-ai.vercel.app",
   }
 ))
 
